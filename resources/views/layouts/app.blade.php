@@ -14,14 +14,12 @@
     </head>
     <body>
 
-        <div class="d-flex" id="wrapper">
+        <div class="d-flex">
       
           <!-- Sidebar -->
-          <div class="bg-dark" id="sidebar-wrapper">
+          <div id="sidebar-wrapper" class="desktop">
             <div class="list-group list-group-flush text-center">
-              {{-- <a href="#" class="list-group-item list-group-item-action bg-light"> --}}
-                <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt="">
-              {{-- </a> --}}
+              <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt="">
               <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-dark">Home</a>
               <a href="{{ route('portfolio') }}" class="list-group-item list-group-item-action bg-dark">Portfolio</a>
               <a href="{{ route('about') }}" class="list-group-item list-group-item-action bg-dark">About</a>
@@ -33,8 +31,7 @@
           <!-- Page Content -->
           <div id="page-content-wrapper">
       
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header-wrapper">
-                {{-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> --}}
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark phone">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,40 +42,45 @@
                 </span>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">Home</a>
-                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('home') }}">Home</a>
+                      </li>
 
-                    <li class="nav-item">
-                         <a class="nav-link" href="{{ route('portfolio') }}">Portfolio</a>
-                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('portfolio') }}">Portfolio</a>
+                      </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
-                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('about') }}">About</a>
+                      </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
-                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                      </li>
 
-                </ul>
+                  </ul>
                 </div>
+
             </nav>
       
             
-          @yield('content')
+            @yield('content')
             
           </div>
           <!-- /#page-content-wrapper -->
       
         </div>
-        <!-- /#wrapper -->
+        <!-- //d-flex -->
+        <footer class="phone text-center mt-3">
+          <p class="footer_text">&copy {{ date('Y') }} Patricija Radivoj - Interior Design</p>
+        </footer>
         @yield('footer')
+        
         <!-- Menu Toggle Script -->
-        @yield('scripts')
         <script src="{{ asset('js/app.js') }}"></script>
+        @yield('scripts')
 
       </body>
 </html>

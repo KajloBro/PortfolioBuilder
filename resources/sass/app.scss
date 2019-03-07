@@ -8,95 +8,98 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
 body {
   overflow-x: hidden;
   background-color: #343a40 !important;
-}
-
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
-
-#page-content-wrapper {
-  min-width: 100vw;
-}
-
-.list-group-item-action {
   color: #cde;
 }
 
-.navbar-toggler {
-  border: none;
+#page-content-wrapper {
+  width: 100%;
 }
 
-.navbar-toggler:focus {
-  outline: none;
+footer {
+  background-color: #262a2e;
 }
 
-.carousel_pic {
+.footer_text {
+  font-size: 10px;
+  color: rgb(180, 199, 218);
+  margin-bottom: 0;
+}
+
+// Mutual screen-size style
+
+.full_screen_pic {
   height: 100vh;
   width: 100%;
   object-fit: cover;
 }
 
-.bgDarkWrap {
-  background-color: #343a40 !important;
-  min-height: 100vh;
+.margin_pic {
+  margin: 10px 0;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio_pic {
   width: 100%;
   height: 90%;
   object-fit: cover;
+  margin: 10px 0;
 }
 
 .portfolio_pic:hover {
   opacity: 0.3;
 }
 
-.project_title_text {
-  color: #cde;
-}
-
-#contactDesktop {
-  height: 100vh;
-}
-
 .contact_info_layout {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.contact_txt {
-  color: white;
-}
+
 
 // Desktop
 @media (min-width: 992px) {
+  
+  // Hide all phone content
+  .phone {
+    display: none;
+  }
+
+  .desktop {
+    min-height: 100vh;
+  }
+
+
+  // Layout
   #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    padding-right: 0;
+    padding-left: 0;
     margin-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
+    margin-left: 15rem;
+  }
+
+  .list-group-item-action {
+    color: #cde;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
   }
 
   .logo {
@@ -105,21 +108,23 @@ body {
     margin-left: 30px;
   }
 
-  #header-wrapper{
-    display: none;
-  }
-
-  #phoneShow {
-    display: none;
-  }
-
 }
 
 // Phones
 @media (max-width: 991px) {
   
-  #sidebar-wrapper {
+  // Hide all desktop content
+  .desktop {
     display: none;
+  }
+  
+  // Layout
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
   }
 
   .logo {
@@ -128,17 +133,4 @@ body {
     margin-right: 50px;
   }
 
-  #myCarousel {
-    display: none;
-  }
-
-  .carousel_pic {
-    margin: 10px 0;
-    width: 100%;
-    height: auto;
-  }
-
-  #contactDesktop {
-    display: none;
-  }
 }
