@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('portfolio', 'HomeController@portfolio')->name('portfolio');
-Route::get('portfolio/{id}', 'HomeController@project')->name('project');
-Route::get('about', 'HomeController@about')->name('about');
-Route::get('contact', 'HomeController@contact')->name('contact');
+Route::get('/', 'FrontController@index')->name('home');
+Route::get('portfolio', 'FrontController@portfolio')->name('portfolio');
+Route::get('portfolio/{id}', 'FrontController@project')->name('project');
+Route::get('about', 'FrontController@about')->name('about');
+Route::get('contact', 'FrontController@contact')->name('contact');
