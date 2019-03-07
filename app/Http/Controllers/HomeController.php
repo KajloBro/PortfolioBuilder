@@ -14,6 +14,11 @@ class HomeController extends Controller
         return view('portfolio');
     }
 
+    public function project($id) {
+        
+        return view('project');
+    }
+
     public function about() {
         return view('about');
     }

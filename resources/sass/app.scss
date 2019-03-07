@@ -15,6 +15,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #343a40 !important;
 }
 
 #sidebar-wrapper {
@@ -58,13 +59,33 @@ body {
 
 .bgDarkWrap {
   background-color: #343a40 !important;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .portfolio_pic {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 90%;
   object-fit: cover;
+}
+
+.portfolio_pic:hover {
+  opacity: 0.3;
+}
+
+.project_title_text {
+  color: #cde;
+}
+
+#contactDesktop {
+  height: 100vh;
+}
+
+.contact_info_layout {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact_txt {
+  color: white;
 }
 
 // Desktop
@@ -113,5 +134,11 @@ body {
 
   .carousel_pic {
     margin: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+
+  #contactDesktop {
+    display: none;
   }
 }

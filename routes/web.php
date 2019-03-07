@@ -13,5 +13,6 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('portfolio', 'HomeController@portfolio')->name('portfolio');
+Route::get('portfolio/{id}', 'HomeController@project')->name('project');
 Route::get('about', 'HomeController@about')->name('about');
 Route::get('contact', 'HomeController@contact')->name('contact');
