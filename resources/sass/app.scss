@@ -57,6 +57,17 @@ footer {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.btn-link {
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 8px 0;;
+}
+
+.btn-link:hover {
+ text-decoration: none !important;
+ color: rgba(255, 255, 255, 0.75);
+}
 
 
 // Desktop
@@ -133,4 +144,19 @@ footer {
     margin-right: 50px;
   }
 
+  a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
+    background-color: #343a40 !important;
+}
+
+  .dropdown-item {
+    color: rgba(255, 255, 255, 0.5);;
+  }
+
+  .dropdown-item:hover {
+    color: rgba(255, 255, 255, 0.75);;
+  }
+
+  .dropdown-menu {
+    border: none;
+  }
 }

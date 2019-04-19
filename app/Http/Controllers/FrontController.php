@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Photo;
 
 class FrontController extends Controller
 {
     public function index() {
-        return view('home');
+        $homeImgs = Photo::where('show_at_home', '1')->pluck('original');
+        return view('home', compact('homeImgs'));
     }
 
     public function portfolio() {
@@ -15,7 +17,6 @@ class FrontController extends Controller
     }
 
     public function project($id) {
-        
         return view('project');
     }
 
