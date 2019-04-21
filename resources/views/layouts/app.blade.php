@@ -20,7 +20,7 @@
           <!-- Sidebar -->
           <div id="sidebar-wrapper" class="desktop">
             <div class="list-group list-group-flush text-center">
-              <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt="">
+              <img class="logo" src="{{asset($logoImg) }}" alt="Logo not found">
               <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-dark">Home</a>
               <a href="{{ route('portfolio') }}" class="list-group-item list-group-item-action bg-dark">Portfolio</a>
               <a href="{{ route('about') }}" class="list-group-item list-group-item-action bg-dark">About</a>
@@ -39,8 +39,9 @@
                 </button>
 
                 <span class="text-center">
-                    <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt="">
+                    <img class="logo" src="{{ asset($logoImg) }}" alt="Logo not found">
                 </span>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto mt-2 mt-lg-0">

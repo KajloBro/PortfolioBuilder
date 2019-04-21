@@ -19,6 +19,7 @@ class CreatePhotosTable extends Migration
             $table->string('original');
             $table->boolean('show_as_projects_photo')->default(0);
             $table->boolean('show_at_home')->default(0);
+            $table->boolean('is_logo')->default(0);
             $table->timestamps();
         });
     }
