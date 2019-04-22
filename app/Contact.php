@@ -11,4 +11,8 @@ class Contact extends Model
     public function photo() {
         return $this->belongsTo('App\Photo');
     }
+
+    public function getFullNameAttribute($value) {
+        return ucfirst($this->first_name) . " " . ucfirst($this->last_name);
+    }
 }

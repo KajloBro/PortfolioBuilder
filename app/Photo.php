@@ -12,4 +12,8 @@ class Photo extends Model
         return "/img/" . $img;  
     }
 
+    public function getSmallAttribute($img) {
+        return "/img/" . $img;
+    }
+
 }
