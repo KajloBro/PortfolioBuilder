@@ -70,6 +70,12 @@ footer {
  color: rgba(255, 255, 255, 0.75);
 }
 
+.table_small_pic {
+  max-height: 30px;
+  max-width: auto;
+  object-fit: overlay;
+}
+
 
 // Desktop
 @media (min-width: 992px) {

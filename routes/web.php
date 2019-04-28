@@ -14,7 +14,7 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 
-// Registration // Delete after Trisha makes an acc
+// Registration // Hide these routes after Trisha makes an acc
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 

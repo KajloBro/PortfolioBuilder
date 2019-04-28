@@ -19,15 +19,11 @@
           <!-- Sidebar -->
           <div id="sidebar-wrapper" class="desktop">
             <div class="list-group list-group-flush text-center">
-              <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt="">
-              <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-dark">Home</a>
-              <a href="{{ route('portfolio') }}" class="list-group-item list-group-item-action bg-dark">Portfolio</a>
-              <a href="{{ route('about') }}" class="list-group-item list-group-item-action bg-dark">About</a>
-              <a href="{{ route('contact') }}" class="list-group-item list-group-item-action bg-dark">Contact</a>
+              <img class="logo" src="{{ asset('img/logo/logo.png') }}" alt=""> <!--todo:dynamic-->
+              <a href="{{ route('photos.index') }}" class="list-group-item list-group-item-action bg-dark">Photos</a>
               <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <input type="submit" value="Logout" class="btn btn-link">
-            </form>
+                <input type="submit" value="Logout" class="list-group-item list-group-item-action bg-dark">
+              </form>
             </div>
           </div>
           <!-- /#sidebar-wrapper -->
