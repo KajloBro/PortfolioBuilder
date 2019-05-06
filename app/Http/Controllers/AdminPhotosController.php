@@ -20,7 +20,9 @@ class AdminPhotosController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        var_dump($data);
+        echo "this is store method";
     }
 
     public function show($id)
@@ -35,7 +37,7 @@ class AdminPhotosController extends Controller
 
     public function update(Request $request, $id)
     {
-        echo "this is update method";
+        //
     }
 
     public function destroy($id)
